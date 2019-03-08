@@ -1,7 +1,13 @@
-function numberList (num) {
+var addNumber = function(num) {
   var objList = {};
-  for (var i = 1; i < num.length; i ++)
-  objList.num[i] = num[i];
+  var number = 1;
+  num.forEach(function(num) {
+    objList[num] = num;
+    // for (var i = 0; i < num.length; i ++){
+    //   number += i;
+    //   return number;
+    // }
+  })
   return objList;
 }
-console.log(numberList([10, 25, 6]));
+console.log(addNumber([10, 15, 20]));
